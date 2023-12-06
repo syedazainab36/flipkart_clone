@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <link rel="icon" href="title logo.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart_clone</title>
+    <style>
+        .main{
+            height: 350vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            background-color: white;
+        }
+
+        body{
+            background-color: rgba(245, 245, 245, 0.521);
+        }
+    header{
+        height: 35
+            apx;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        gap:30px;
+        align-items: center;
+        /* position: fixed; */
+    }
+    header .img{
+            position: absolute;
+            left: 0px;
+            top: 10px;
+    }
+    header .search{
+        height: 30px;
+        width: 650px;
+        background-color: rgb(209, 243, 232);
+        display: flex;
+        border-radius: 5px;
+        gap: 10px;
+        align-items: center;
+    }
+    .search svg{
+        margin-left: 10px;
+    }
+    .search input[type="search"]:focus{
+        border: none;
+    } 
+    .search input[type="search"]{
+        height: 20px;
+        width: 750px;
+        background: none;
+        border: none;
+    }
+    .login{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 20px;
+    }
+    .login:hover .bi-chevron-down{
+        transform: rotate(180deg);
+        transition: transform 0.2s ease-in-out;
+    }
+    .cart{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 20px;
+    }
+    header .seller{display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 20px;    
+
+    }
+
+                                            /* main container starts */
+    .main_container{
+        height:1820px;
+        width: 90%;
+        background-color: whitesmoke;
+    }
+    .header2{
+        height: 150px;
+        width: 100%;
+        background-color: white;
+        /* border: solid; */
+        margin-top: 10px;
+        display: flex;
+        align-items:flex-start;
+        justify-content:space-around;
+        /* justify-content: center; */
+        /* margin-left: 5px; */
+        align-items: center;
+        border-radius: 2px;
+    }
+    .header3{
+        height: 198px;
+        width: 100%;
+        background-color: white;
+        /* border: solid; */
+        margin-top: 10px;
+        border-radius: 2px;
+
+    }
+    .best_elec{
+        height: 300px;
+        width: 100%;
+        margin-top: 0px;
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        border:  solid;
+        gap: 5px;
+    }
+    /* h5{
+        flex-direction: column;
+    } */
+    .best_elec, .keyboard, .mouse, .powerbank, .ups, .charger{
+        border:  0.1px solid ;
+    }
+    .best_beauty{
+        height: 300px;
+        width: 100%;
+        margin-top: 0px;
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        border:  solid;
+        gap: 5px;
+    }
+    .header4{
+        display: flex;
+        
+    } 
+    .top_selec{
+        height: 100vh;
+        width: 33%;
+        background-color: white;
+        margin-top: 20px;
+        /* display:flex ;
+        align-items: center;
+        justify-content: center;
+        align-content: center; */
+       }  
+    .ts{
+        display: flex;
+        height: 50px;
+        text-align: justify;
+        width: 100%;
+        background-color: white;
+    }
+    .top_selec svg{
+        margin-left: 220px;
+        margin-top: 10px;
+        height: 20px;
+        width: 20px;
+        color: rgb(5, 5, 248);
+    }
+    .shoes{
+        height: 92vh;
+        width: 50%;
+        border: 0.1px black solid;
+        background-color: white;
+        /* display: flex; */
+        text-align: center;
+    }
+    .shoes img{
+        position: relative;
+        top: 100px;
+        width:100%;
+        height: 30vh;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        
+    }
+    .shoes p{
+        position: relative;
+        top: 120px;
+    }
+    .shoes span{
+        position: relative;
+        top: 100px;
+    }
+    .watch{
+        height: 45vh;
+        width: 50%;
+        border: 0.1px black solid;
+        background-color: white;
+        /* display: flex; */
+        text-align: center;
+        border: 0.1px solid;
+        position: relative;
+        left: 200px;
+        bottom: 650px;
+    }
+    .watch img{
+        /* position: relative;
+        top: 100px; */
+        width:90%;
+        height: 25vh;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-top: 10px;
+
+    }
+    .chelsea{
+        height: 40vh;
+        width: 50%;
+        border: 0.1px black solid;
+        background-color: white;
+        /* display: flex; */
+        text-align: center;
+        border: 0.1px solid;
+        position: relative;
+        left: 200px;
+        bottom: 770px;
+
+    }
+    .chelsea img{
+        width:90%;
+        height: 25vh;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        align-content: center;
+    }
+    .top_sugg{
+        height: 100vh;
+        width: 33%;
+        background-color: white;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+    .watch1{
+        height: 50%;
+        width: 100%;
+        border: 0.1px solid;
+        text-align: center;
+
+    }
+    .watch1 img{
+        height: 30vh;
+        width: 60%;
+
+    }
+    .watch2{
+        height: 44%;
+        width: 100%;
+        border: 0.1px solid;
+        text-align: center;
+    }
+    .watch2 img{
+        height: 28vh;
+        width: 50%;
+    }
+    .poster{
+        height: 100vh;
+        width: 33%;
+        background-color: yellowgreen;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+    .poster img{
+        height: 100vh;
+        width: 100%;
+    }
+    .last{
+        height: 400px;
+        width: 100%;
+        background-color: rgb(16, 34, 34);
+    }
+    
+    /* main container ends */
+    </style>
+    
+</head>
+<body>
+    <div class="main">
+
+    <!-- navig starts -->
+    <header>
+        <img src="logo in navig.svg" alt="logo">
+        <div class="search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="20px" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>
+              <input type="search" name="" id="" width="600px" height="10px" placeholder="search for products and services";>
+        </div>
+        <div class="login">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+              </svg>
+              <p>Login</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+              </svg>
+        </div>
+        <div class="cart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </svg><p>Cart</p>
+        </div>
+        <div class="seller">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
+                <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
+              </svg><p>Become a seller</p>
+        </div>
+        <div class="dots">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+              </svg>
+        </div>
+    </header>
+    <!-- navig ends -->
+
+    <!-- main container starts -->
+    <div class="main_container">
+        <header class="header2">
+            <div class="g">
+                <img src="groc.webp" alt="">
+                <p style="font-size: 20px;">Grocery</p>
+            </div>
+            <div>
+                <img src="phone.webp" alt="">
+                <p style="font-size: 20px;">Smartphones</p>
+            </div>
+            <div><img src="fashion.webp" alt="">
+            <p style="font-size: 20px;">Fashion</p></div>
+            <div><img src="elec.webp" alt=""><p style="font-size: 20px;">Electronics</p></div>
+            <div><img src="furniture.webp" alt="">
+            <p style="font-size: 20px;">Furniture</p></div>
+            <div><img src="apl.webp" alt="" height="40px"><p style="font-size: 20px;">Home appliances</p></div>
+            <div><img src="trav.webp" alt=""><p style="font-size: 20px;">Travel</p></div>
+            <div><img src="toy.webp" alt=""><p style="font-size: 20px;">Toys</p></div>
+        </header>
+    
+            <!-- carousel starts -->
+            <div class="header3">
+                <div id="carouselExampleAutoplaying" class="carousel slide"             data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="slide1.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="slide2.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="slide3.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="slide4.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="slide5.webp" class="d-block w-100" alt="...">
+                  </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div><!-- carousel ends -->
+
+            <!-- best of elec starts -->
+            <h5 style="margin-top: 60px;">Best of electronics</h5>
+            <div class="best_elec">
+                
+                <div class="keyboard">
+                    <img src="keyboard1.webp" alt="" height="200px" width="210px">
+                <p>Keyboard</p>
+                <span><strong>from &#8377;999</strong></span>
+                </div>
+                <div class="mouse">
+                    <img src="mouse1.webp" alt="" height="200px" width="210px">
+                <p>Mouse</p>
+                <span><strong>from &#8377;299</strong></span>
+                </div>
+                <div class="powerbank">
+                    <img src="Powerbank.webp" alt="" height="200px" width="210px">
+                <p>Powerbank</p>
+                <span><strong>from &#8377;799</strong></span>
+                </div>
+                <div class="charger">
+                    <img src="charger.webp" alt="" height="200px" width="210px">
+                <p>Charger</p>
+                <span><strong><strong>from &#8377;1199</strong></strong></span>
+                </div>
+                <div class="ups">
+                    <img src="ups1.webp" alt="" height="200px" width="210px">
+                <p>UPS</p>
+                <span><strong>from &#8377;20999</strong></span>
+                </div>
+             </div>  <!--best of eec ends-->
+
+        <!-- best of beauty  starts -->
+        <h5 style="margin-top: 60px;">Best of Beauty products</h5>
+        <div class="best_beauty">
+            <div class="cleanser">
+                <img src="cleanser.webp" alt="" height="200px" width="210px">
+            <p>Cleanser</p>
+            <span><strong>from &#8377;299</strong></span>
+            </div>
+            <div class="Moisturizer">
+                <img src="moisturizer.webp" alt="" height="200px" width="210px">
+            <p>Moisturizer</p>
+            <span><strong>from &#8377;399</strong></span>
+            </div>
+            <div class="toner">
+                <img src="toner.webp" alt="" height="200px" width="210px">
+            <p>Toner</p>
+            <span><strong>from &#8377;299</strong></span>
+            </div>
+            <div class="sunscreen">
+                <img src="sunscreen.webp" alt="" height="200px" width="210px">
+            <p>Sunscreen</p>
+            <span><strong><strong>from &#8377;499</strong></strong></span>
+            </div>
+            <div class="serum">
+                <img src="serum.webp" alt="" height="200px" width="210px">
+            <p>Serum</p>
+            <span><strong>from &#8377;199</strong></span>
+            </div>
+         </div>
+        <!-- best of beauty ends -->
+
+        <!-- header4 startss -->
+        <div class="header4">
+            <div class="top_selec">
+                <div class="ts">
+                <h5>Top selections</h5>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                  </svg>
+                </div>
+                  <div class="shoes">
+                        <img src="vans.jpg" alt="">
+                        <p>Vans Sneakers</p>
+                        <span><strong>from &#8377;1,899</strong></span>
+                  </div>
+                  <div class="watch">
+                    <img src="watch.webp" alt="">
+                    <p>Casio Vintage ( LA680WGA-9BDF )</p>
+                    <span><strong>from &#8377;1,599</strong></span>
+                  </div>
+                  <div class="chelsea">
+                    <img src="chelsea1.jpg" alt="">
+                    <p>Red tape Leather</p>
+                    <span><strong>from &#8377;2,699</strong></span>
+                  </div>
+            </div>
+            <div class="top_sugg">
+                <h5>Top suggestions</h5>
+                <div class="watch1">
+                   <center><img src="watch3.jpg"></center> 
+                    <p>TITAN QUARTZ ANALOG BLACK DIAL STAINLESS STEEL STRAP WATCH FOR MEN</p>
+                    <span><strong>from &#8377;3,495</strong></span>
+                </div>
+                <div class="watch2">
+                    <img src="watch2.webp" alt="">
+                    <p>TITAN REGALLIA ROSE GOLD CHRONOGRAPH STAINLESS STEEL STRAP WATCH FOR MEN</p>
+                    <span><strong>from &#8377;12,745</strong></span>
+                </div>
+            </div>
+            <div class="poster">
+               <img src="poster1.jpg" alt="">
+            </div>
+            </div>
+            <!-- header4 endssss -->
+         </div> <!-- main conatiner ends -->
+         <div class="last">
+         </div>
+         
+    </div>   <!-- main containerends -->
+    
+</body>
+</html>
